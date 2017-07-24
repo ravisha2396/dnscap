@@ -10,10 +10,10 @@
 #include "tag4.h"
 
 
-const byte DNS_PORT = 53;
-IPAddress apIP(192, 168, 1, 1);
-DNSServer dnsServer;
-ESP8266WebServer webServer(80);
+const byte DNS_PORT = 53; // UDP port 53 used by DNS requests and replies
+IPAddress apIP(192, 168, 1, 1); //IP address assignment for the server we are configuring.
+DNSServer dnsServer; //dnsserver object to configure the dns of the server we create
+ESP8266WebServer webServer(80); //declare a object of type ESP8266WebServer which is active at port 80
  String s = MAIN_page; 
  String h=Second_page;
  String p=tag1;
@@ -63,10 +63,7 @@ void setup() {
    webServer.on("/L4",handle_L4);
     webServer.on("/L5",handle_L5);
     webServer.on("/L6",handle_L6);
-  /*webServer.onNotFound([]() {
-    webServer.send(200, "text/html", s);
-  });*/
-  
+
    
   webServer.begin();
 }
