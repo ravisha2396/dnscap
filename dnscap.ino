@@ -21,28 +21,27 @@ ESP8266WebServer webServer(80); //declare a object of type ESP8266WebServer whic
  String r=tag3;
  String l=tag4;
 void handleNotFound() {
- // Serial.print("\t\t\t\t URI Not Found: ");
-  //Serial.println(server.uri());
+
   webServer.send(200, "text/html", s);
 }
-void handle_L2() {//?v=0
+void handle_L2() {
     webServer.send(200, "text/html", h);
 
 }
-void handle_L3() {//?v=0
+void handle_L3() {
     webServer.send(200, "text/html", p);
 
 }
 
-void handle_L4() {//?v=0
+void handle_L4() {
     webServer.send(200, "text/html", q);
 
 }
-void handle_L5() {//?v=0
+void handle_L5() {
     webServer.send(200, "text/html", r);
 
 }
-void handle_L6() {//?v=0
+void handle_L6() {
     webServer.send(200, "text/html", l);
 
 }
