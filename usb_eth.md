@@ -38,9 +38,8 @@ Target packages  --->
     Networking Applications --->
 		[*] dropbear
 ```
-
-```	
-  Exit menuconfig and save the changes as you exit.
+	
+Exit menuconfig and save the changes as you exit.
 
 5. Next we configure our Linux Kernel, to set up the power usb as a gadget, and invoke various gadget functions:
 
